@@ -12,6 +12,6 @@ class CountryController extends Controller
     {
         $countries = Country::orderBy('name')->get();
 
-        return CountryResource::collection($countries);
+        return $this->apiResponse->send(CountryResource::collection($countries));
     }
 }
