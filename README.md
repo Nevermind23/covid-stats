@@ -8,6 +8,7 @@ A simple application for processing covid statistics.
 - `composer install`
 - `cp .env.example .env`
 - Configure mysql connection
+- `php artisan migrate`
 - `php artisan octane:start`
 
 ## Commands
