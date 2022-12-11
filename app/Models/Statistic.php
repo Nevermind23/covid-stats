@@ -12,6 +12,10 @@ class Statistic extends Model
 
     protected $guarded = [];
 
+    protected $touches = [
+        'country'
+    ];
+
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);
