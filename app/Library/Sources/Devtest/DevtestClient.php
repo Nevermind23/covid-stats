@@ -24,7 +24,7 @@ class DevtestClient implements StatisticProvider, CountryProvider
 
     public function getStatisticByCountries(string $code): array
     {
-        $url  = "https://devtest.ge/countries";
+        $url  = "https://devtest.ge/get-country-statistics";
 
         return $this->apiProvider->post($url, [
             'code' => $code
