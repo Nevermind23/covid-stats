@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CountryController;
 use App\Http\Controllers\SanctumAuthController;
+use App\Http\Controllers\StatisticController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,4 +29,19 @@ Route::middleware('auth:sanctum')
     ->group(function () {
         Route::post('/logout', [SanctumAuthController::class, 'logout'])
             ->name('logout');
+
+        Route::get('/countries', [CountryController::class, 'index'])
+            ->name('countries');
+
+        Route::prefix('statistics')
+            ->as('statistics.')
+            ->group(function () {
+                Route::get('/', [StatisticController::class, 'index'])
+                    ->name('index');
+
+                Route::get('/{code}', [StatisticController::class, 'show'])
+                    ->where('code', '[A-Za-z]{2}')
+                    ->name('show');
+            });
+
     });
