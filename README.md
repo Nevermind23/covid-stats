@@ -4,7 +4,7 @@ A simple application for processing covid statistics.
 ## Requirements
 - php:^8.0
 ## Installation
-- `git clone git@github.com:Nevermind23/covid-stats.git && cd codiv-stats`
+- `git clone git@github.com:Nevermind23/covid-stats.git && cd covid-stats`
 - `composer install`
 - `cp .env.example .env`
 - Configure mysql connection
