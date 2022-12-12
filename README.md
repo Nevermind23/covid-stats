@@ -10,6 +10,7 @@ Only login and registration page doesn't require authorization header.
 - `git clone git@github.com:Nevermind23/covid-stats.git && cd covid-stats`
 - `composer install`
 - `cp .env.example .env`
+- `php artisan key:generate`
 - Configure mysql connection
 - `php artisan migrate`
 - `php artisan octane:start`
