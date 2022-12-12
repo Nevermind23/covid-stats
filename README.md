@@ -1,6 +1,9 @@
 # Covid stats
 A simple application for processing covid statistics.
 
+**NOTE**: Before using this application, please register using `/api/register` endpoint and send returned `token` inside every request with `Authorization: Brearer {token}` header.
+Only login and registration page doesn't require authorization header.
+
 ## Requirements
 - php:^8.0
 ## Installation
@@ -27,6 +30,5 @@ A simple application for processing covid statistics.
 - `GET` `/api/statistics`
 - `GET` `/api/statistics/{country_code}`
 
-
-**NOTE**: Before using this application, please register using `/api/register` endpoint and send returned `token` inside every request with `Authorization: Brearer {token}` header.
-Only login and registration page doesn't require authorization header.
+## Testing
+- `php artisan test --testsuite=Feature`
