@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', response()->json(["Covid-stats API"]));
+Route::get('/', function () {
+    return response()->json(["Covid-stats API"]);
+});
